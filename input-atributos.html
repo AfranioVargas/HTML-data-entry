@@ -1,0 +1,30 @@
+<!--
+    <input> Atributos comuns
+
+        - type="" atributos que define o tipo de dados        
+        - autocomplete (abre uma lista de opções para autocompletar)
+        - autofocus (ao carregar a página o elemento setado recebe o primeiro foco. Um por 
+          página interna
+        - disabled (impede a entrada de dados)
+        - readonly (Alguns campos não vão aceitar este atributo)
+        - value
+        - form (Alguns campos não vão aceitar este atributo)
+        - name
+        - required (Significa que é obrigatório preencher este campo. Pode ser usado em vários
+          campos. Alguns campos não vão aceitar este atributo)
+        - placeholder (passoword, search, tel, text, url. Alguns campos não aceitam este atributo)
+
+
+-->
+
+<form id="dados-pessoais"></form>
+    <fieldset>
+        <legend>Dados pessoais</legend>
+           <label for="">Emai:</label><input required name="email" type="email" autocomplete="email" autofocus form="dados-pessoais" placeholder="Digite seu email"><br>
+           <label for="">Nome:</label><input required name="nome" type="text" form="dados-pessoais" placeholder="Digite seu nome"><br>
+           <label for="">Data da nascimento:</label><input required name="data-nascimento" type="date" form="dados-pessoais" placeholder="Digite seu nome"><br>
+           <label for="">Sexo:</label><input name="sexo" type="texto" form="dados-pessoais" placeholder="Masculino ou feminino"><br>
+           <label for="">Profissão:</label><input required name="profissao" type="text" form="dados-pessoais" readonly><br>
+           <label for="">Obs.:</label><input name="observacao" type="value" value="Texto" form="dados-pessoais" disabled><br>
+    </fieldset>
+

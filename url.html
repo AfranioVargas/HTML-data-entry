@@ -1,0 +1,69 @@
+<!--
+    <input type="url">
+        - Espera que o usuário digite um url
+        - Irá validar se o valor digitado é uma url
+
+    ATRIBUTOS
+    - placeholder
+    - readonly / disabled
+    - value
+    - required
+    - multiple
+        - O campo irá receber 1 ou mais emails, separado por vírgulas
+    
+    - minlenght / maxlenght
+        - O mínimo e/ou máximo valor que o campo irá conter
+    
+    - size
+        O Valor numérico indicando quantos caracteres esse 
+
+    - pattern
+        - uso de expressão regular para validar o campo
+        - exemplo: o usuário só poderá colocar email do domínio rocketseat.com.br
+            * pattern=".*\.com\.br"
+        
+    - list
+        - O id de uma ag <datalist> que está no mesmo documento
+        - <datalist> irá conter uma lista de valores pré-definidos a fim de sugerir ao usuário, quais valores estão disponíveis
+                * Os valores do <datalist> que não forem compatíveis com o campo, não serão apresentados como sugestão
+                
+    - spellcheck
+        - Habilitar a verificação ortográfica para este input
+    
+-->
+<form action="">
+    <input type="url"
+        placeholder="http://example.com.br"
+        pattern=".*\.com\.br.*"
+        title="Digite somente domínios .com.br"
+        required
+        spellcheck="true"> <!--por padrão faz correção ortográfica--> 
+    <button type="submit">Enviar</button>
+
+    <input type="url"
+    placeholder="http://example.com.br"
+    pattern=".*\.com\.br.*"
+    title="Digite somente domínios .com.br"
+    required
+    spellcheck="true"
+    disabled
+    > <!--por padrão faz correção ortográfica--> 
+    
+    <button type="submit">Enviar</button>
+
+    <input type="url"
+        placeholder="http://example.com.br"
+        pattern=".*\.com\.br.*"
+        title="Digite somente domínios .com.br"
+        required
+        list="urldata"
+    >
+    <datalist id="urldata">
+        <option>http://meusite.com.br</option>
+        <option>https://meusite.com.br</option>
+        
+    </datalist>
+    <button type="submit">Enviar</button>
+</form>
+
+    
